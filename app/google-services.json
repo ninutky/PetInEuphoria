@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "124344412923",
+    "project_id": "petineuphoria-f6fdf",
+    "storage_bucket": "petineuphoria-f6fdf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:124344412923:android:0c2b1ffc88312c1e009e5e",
+        "android_client_info": {
+          "package_name": "com.example.petineuphoria"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "124344412923-k26ii5kobr9275ch86mp0rvbh62mac7s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.petineuphoria",
+            "certificate_hash": "21ccfe946c0e334948daeadc88986262cfbf4a7a"
+          }
+        },
+        {
+          "client_id": "124344412923-otebslpgabh70qpsomrrch8r8edofbvk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDodo0ZhrMBDFXkn1_zHboYBHf1IGVX0ek"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "124344412923-otebslpgabh70qpsomrrch8r8edofbvk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF9E4">
+
+    <TextView
+        android:text="1/5"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="25dp" />
+
+    <TextView
+        android:text="등록하기"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="40dp" />
+
+    <TextView
+        android:text="반려동물의 사진을 업로드해주세요!"
+        android:layout_marginTop="45dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#635151"
+        android:textSize="25dp" />
+
+    <ImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/exam"
+        android:layout_gravity="center" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next_button"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:text="다음"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@drawable/next_button"
+        android:layout_width="75dp"
+        android:layout_height="60dp"
+        android:layout_gravity="end" />
+
+</LinearLayout>
