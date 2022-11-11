@@ -14,6 +14,7 @@ class FindRegisterActivity5 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_find_register5)
+        supportActionBar?.hide()
 
         val done = findViewById<Button>(R.id.next_button)
         val prev = findViewById<Button>(R.id.prev_button)
@@ -37,7 +38,7 @@ class FindRegisterActivity5 : AppCompatActivity() {
             val cal = Calendar.getInstance()
 
             val data = OnDateSetListener { view, year, month, day ->
-                sd.setText("${year}/${month}/${day}")
+                sd.setText("${year}년 ${month}월 ${day}일")
             }
 
             val dialog = DatePickerDialog(

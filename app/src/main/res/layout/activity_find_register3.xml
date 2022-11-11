@@ -26,7 +26,7 @@
 
 <TextView
     android:text="반려동물의 특징을 알려주세요!"
-    android:layout_marginTop="45dp"
+    android:layout_marginTop="35dp"
     android:layout_gravity="center"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
     android:layout_gravity="center"
     android:gravity="top"
     android:layout_marginTop="45dp"
-    android:maxLength="500"
+    android:maxLength="340"
     android:padding="15dp"
     android:hint="(예: 목에 무늬가 있어요, 사람을 잘 따라요)"
     android:background="@drawable/exam" />

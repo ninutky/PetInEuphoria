@@ -25,16 +25,62 @@
         android:textColor="@color/black"
         android:textSize="40dp" />
 
+    <TextView
+        android:text="발견 날짜"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="40dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textColor="#635151"
+        android:textSize="20dp" />
 
     <TextView
         android:id="@+id/startDate"
         android:gravity="center"
-        android:layout_width="258dp"
-        android:layout_height="40dp"
+        android:layout_width="330dp"
+        android:layout_height="45dp"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/exam"
         android:text="날짜 선택" />
+
+    <TextView
+        android:text="적고 싶은 말"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textColor="#635151"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="330dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:gravity="top"
+        android:layout_marginTop="10dp"
+        android:maxLength="250"
+        android:padding="15dp"
+        android:hint="(예: 목에 무늬가 있어요, 사람을 잘 따라요)"
+        android:background="@drawable/exam" />
+
+    <TextView
+        android:text="사례금 (선택)"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textColor="#635151"
+        android:textSize="20dp" />
+
+<!--    체크하면 금액을 쓸 수 있게, 숫자 뒤 원-->
+    <CheckBox android:id="@+id/checkbox_cheese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:onClick="onCheckboxClicked"/>
+
+
 
     <!--    <DatePicker-->
     <!--        android:id="@+id/date_picker"-->
