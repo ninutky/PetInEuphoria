@@ -12,10 +12,17 @@ class FindRegisterActivity3 : AppCompatActivity() {
         supportActionBar?.hide()
 
         val next = findViewById<Button>(R.id.next_button)
+        val prev = findViewById<Button>(R.id.prev_button)
 
         next.setOnClickListener {
             val intent = Intent(this,
                 FindRegisterActivity4::class.java)
+            startActivity(intent)
+        }
+
+        prev.setOnClickListener {
+            val intent = Intent(this,
+                FindRegisterActivity2::class.java)
             startActivity(intent)
         }
     }

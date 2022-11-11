@@ -20,46 +20,20 @@ class FindRegisterActivity2 : AppCompatActivity() {
         supportActionBar?.hide()
 
         val next = findViewById<Button>(R.id.next_button)
+        val prev = findViewById<Button>(R.id.prev_button)
+
         next.setOnClickListener {
             val intent = Intent(this,
                 FindRegisterActivity3::class.java)
             startActivity(intent)
         }
 
-//        findViewById<ColorPickerView>(R.id.colorPickerView).setColorListener(object: ColorListener {
-//            override fun onColorSelected(color: Int, fromUser: Boolean) {
-//                  Log.d("mytag", color.toString())
-//                  findViewById<LinearLayout>(R.id.register_2_layout).setBackgroundColor(color)
-//            }
-//        })
-
-//        findViewById<ColorPickerView>(R.id.colorPickerView).setColorListener(object: ColorEnvelopeListener {
-//            override fun onColorSelected(envelope: ColorEnvelope?, fromUser: Boolean) {
-//                val linearLayout: LinearLayout = findViewById(R.id.register_2_layout)
-//                    linearLayout.setBackgroundColor(envelope.getColor());
-//
-//                textView.setText("#" + envelope.getHexCode());
-//
-//
-//            }
-//        })
+        prev.setOnClickListener {
+            val intent = Intent(this,
+                FindRegisterActivity::class.java)
+            startActivity(intent)
+        }
 
 
-    } //onCreate
-
-//        buttonEvent = findViewById<View>(R.id.buttonEvent) as Button
-//        buttonEvent!!.setOnTouchListener { view, motionEvent ->
-//            if (motionEvent.action == MotionEvent.ACTION_DOWN) {
-//                buttonEvent!!.setBackgroundColor(Color.TRANSPARENT)
-//            } else if (motionEvent.action == MotionEvent.ACTION_UP) {
-//                buttonEvent!!.setBackgroundColor(Color.LTGRAY)
-//            }
-//            false
-//        }
-//    }
-
-
-
-    // val colorPickerView = findViewById<ColorPickerView>(R.id.colorPickerView)
-    // https://aries574.tistory.com/215
+    }
 }

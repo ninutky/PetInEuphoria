@@ -45,17 +45,39 @@
     android:hint="(예: 목에 무늬가 있어요, 사람을 잘 따라요)"
     android:background="@drawable/exam" />
 
-<androidx.appcompat.widget.AppCompatButton
-    android:id="@+id/next_button"
-    android:layout_marginTop="30dp"
-    android:layout_marginRight="20dp"
-    android:text="다음"
-    android:textSize="20dp"
-    android:textColor="@color/white"
-    style="?android:attr/borderlessButtonStyle"
-    android:background="@drawable/next_button"
-    android:layout_width="75dp"
-    android:layout_height="60dp"
-    android:layout_gravity="end" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/prev_button"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="75dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/button"
+            android:text="이전"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/next_button"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="75dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:text="다음"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:background="@drawable/button"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
 
 </LinearLayout>
