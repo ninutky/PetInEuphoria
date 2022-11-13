@@ -61,7 +61,7 @@
         android:layout_marginTop="10dp"
         android:maxLength="250"
         android:padding="15dp"
-        android:hint="(예: 목에 무늬가 있어요, 사람을 잘 따라요)"
+        android:hint="요 박스 안에 글씨 준다 vs 만다"
         android:background="@drawable/exam" />
 
     <TextView
@@ -73,7 +73,7 @@
         android:textColor="#635151"
         android:textSize="20dp" />
 
-<!--    체크하면 금액을 쓸 수 있게, 숫자 뒤 원-->
+<!--    체크하면 금액을 쓸 수 있게, 숫자 뒤 "원"-->
     <CheckBox android:id="@+id/checkbox_cheese"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
