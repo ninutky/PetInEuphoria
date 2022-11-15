@@ -15,6 +15,7 @@ import androidx.core.content.ContextCompat
 class FindRegisterActivity : AppCompatActivity() {
 
     lateinit var ivProfile: ImageView
+    private var img_cnt = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,10 +25,15 @@ class FindRegisterActivity : AppCompatActivity() {
 
         val next = findViewById<Button>(R.id.next_button)
 
+
         next.setOnClickListener {
-            val intent = Intent(this,
-                FindRegisterActivity2::class.java)
-            startActivity(intent)
+            if (img_cnt == 0)
+                Toast.makeText(this, "사진을 등록해주세요.", Toast.LENGTH_SHORT).show()
+            else {
+                val intent = Intent(this,
+                    FindRegisterActivity3::class.java)
+                startActivity(intent)
+            }
         }
 
     }
@@ -94,8 +100,9 @@ class FindRegisterActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         // 예외처리
-        if (resultCode != Activity.RESULT_OK)
+        if (resultCode != Activity.RESULT_OK) {
             return
+        }
 
         when (requestCode) {
             // 2000: 이미지 컨텐츠를 가져오는 액티비티를 수행한 후 실행되는 Activity 일 때만 수행하기 위해서
@@ -103,6 +110,7 @@ class FindRegisterActivity : AppCompatActivity() {
                 val selectedImageUri: Uri? = data?.data
                 if (selectedImageUri != null) {
                     ivProfile.setImageURI(selectedImageUri)
+                    img_cnt = 1
                 } else {
                     Toast.makeText(this, "사진을 가져오지 못했습니다.", Toast.LENGTH_SHORT).show()
                 }
@@ -113,10 +121,11 @@ class FindRegisterActivity : AppCompatActivity() {
         }
     }
 
+    // 권한
     private fun showPermissionContextPopup() {
         AlertDialog.Builder(this)
             .setTitle("권한이 필요합니다.")
-            .setMessage("프로필 이미지를 바꾸기 위해서는 갤러리 접근 권한이 필요합니다.")
+            .setMessage("반려동물의 사진을 등록하기 위해서는 갤러리 접근 권한이 필요합니다.")
             .setPositiveButton("동의하기") { _, _ ->
                 requestPermissions(arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE), 1000)
             }

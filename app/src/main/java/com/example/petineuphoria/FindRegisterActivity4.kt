@@ -22,9 +22,7 @@ class FindRegisterActivity4 : AppCompatActivity() {
         }
 
         prev.setOnClickListener {
-            val intent = Intent(this,
-                FindRegisterActivity3::class.java)
-            startActivity(intent)
+            super.onBackPressed()
         }
 
 

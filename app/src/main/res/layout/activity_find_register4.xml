@@ -17,13 +17,54 @@
 
     <TextView
         android:text="등록하기"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:textSize="40dp" />
 
+    <TextView
+        android:text="반려동물을 잃어버린\n장소가 어디인가요?"
+        android:gravity="center"
+        android:layout_marginTop="35dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#635151"
+        android:textSize="25dp" />
+
+    <TextView
+        android:text="장소 선택"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="40dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textColor="#635151"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/startDate"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/exam"
+        android:gravity="top"
+        android:padding="15dp"
+        android:text="장소를 검색하세요." />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/button"
+        android:text="선택하기"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -37,7 +78,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="30dp"
-            android:background="@drawable/button"
+            android:background="@drawable/button_ripple"
             android:text="이전"
             android:textColor="@color/white"
             android:textSize="20dp"
@@ -55,7 +96,7 @@
             android:text="다음"
             android:textSize="20dp"
             android:textColor="@color/white"
-            android:background="@drawable/button"
+            android:background="@drawable/button_ripple"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true" />
     </RelativeLayout>

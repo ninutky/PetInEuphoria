@@ -12,11 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PetInEuphoria">
         <activity
-            android:name=".DatePicker"
-            android:exported="false" />
-        <activity
-            android:name=".ColorPicker"
-            android:exported="false" />
+            android:name=".FindProfile"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".FindRegisterActivity5"
             android:exported="false" />

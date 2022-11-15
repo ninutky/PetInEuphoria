@@ -17,7 +17,7 @@
 
     <TextView
         android:text="등록하기"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
             android:text="다음"
             android:textSize="20dp"
             android:textColor="@color/white"
-            android:background="@drawable/button"
+            android:background="@drawable/button_ripple"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true" />
     </RelativeLayout>

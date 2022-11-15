@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/register_2_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -19,28 +18,71 @@
 
     <TextView
         android:text="등록하기"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:textSize="40dp" />
 
-    <com.skydoves.colorpickerview.ColorPickerView
-        android:id="@+id/colorPickerView"
-        android:layout_width="50dp"
-        android:layout_height="50dp" />
+    <TextView
+        android:text="털색 선택"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textColor="#635151"
+        android:textSize="20dp" />
 
-    <EditText
-        android:id="@+id/animal_name_edit"
+    <RadioGroup
+        android:layout_gravity="center"
         android:layout_width="290dp"
         android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="45dp"
-        android:maxLength="15"
-        android:padding="15dp"
-        android:hint="반려동물 이름 입력"
-        android:background="@drawable/exam" />
+        android:layout_marginTop="10dp"
+        android:background="@drawable/exam"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/color1"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#000000"
+            android:layout_marginLeft="13dp"
+            android:onClick="onCheckboxClicked"/>
+
+        <RadioButton
+            android:id="@+id/color2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#A8A8A8"
+            android:layout_marginLeft="10dp"
+            android:onClick="onCheckboxClicked"/>
+
+        <RadioButton
+            android:id="@+id/color3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#FFFFFF"
+            android:layout_marginLeft="10dp"
+            android:onClick="onCheckboxClicked"/>
+        <RadioButton
+            android:id="@+id/color4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#B8794D"
+            android:layout_marginLeft="10dp"
+            android:onClick="onCheckboxClicked"/>
+
+        <RadioButton
+            android:id="@+id/color5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#7D411C"
+            android:layout_marginLeft="10dp"
+            android:onClick="onCheckboxClicked"/>
+
+    </RadioGroup>
 
     <LinearLayout
         android:layout_width="400dp"
@@ -51,24 +93,69 @@
         android:orientation="horizontal">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="135dp"
+            android:id="@+id/g_btn"
+            android:layout_width="140dp"
             android:layout_height="50dp"
             android:layout_marginLeft="55dp"
-            android:background="@drawable/girl"
+            android:background="@drawable/girl_ripple"
             android:text="♀"
             android:textSize="30dp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="135dp"
+            android:id="@+id/b_btn"
+            android:layout_width="140dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/boy"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/boy_ripple"
             android:text="♂"
             android:textSize="30dp" />
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/d_btn"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="55dp"
+            android:background="@drawable/btn_ripple"
+            android:text="강아지"
+            android:textSize="20dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/c_btn"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_ripple"
+            android:text="고양이"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
     <EditText
+        android:id="@+id/animal_name"
+        android:layout_width="290dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:inputType="text"
+        android:maxLength="15"
+        android:hint="반려동물 이름 입력"
+        android:background="@drawable/exam" />
+
+
+
+    <EditText
+        android:id="@+id/animal_age"
         android:layout_width="290dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
@@ -79,39 +166,16 @@
         android:hint="나이 입력"
         android:background="@drawable/exam" />
 
-    <LinearLayout
-        android:layout_width="400dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_weight="0"
-        android:orientation="horizontal">
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="135dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="55dp"
-            android:background="@drawable/exam"
-            android:text="강아지"
-            android:textSize="20dp" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="135dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/exam"
-            android:text="고양이"
-            android:textSize="20dp" />
-
-    </LinearLayout>
-
     <EditText
+        android:id="@+id/animal_breed"
         android:layout_width="290dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:padding="15dp"
+        android:inputType="text"
         android:hint="견종 / 묘종 입력"
+        android:maxLength="20"
         android:background="@drawable/exam" />
 
     <RelativeLayout
@@ -126,7 +190,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="30dp"
-            android:background="@drawable/button"
+            android:background="@drawable/button_ripple"
             android:text="이전"
             android:textColor="@color/white"
             android:textSize="20dp"
@@ -144,7 +208,7 @@
             android:text="다음"
             android:textSize="20dp"
             android:textColor="@color/white"
-            android:background="@drawable/button"
+            android:background="@drawable/button_ripple"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true" />
     </RelativeLayout>
