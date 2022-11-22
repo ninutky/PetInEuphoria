@@ -27,14 +27,16 @@
 
     <TextView
         android:text="털색 선택"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
         android:layout_marginTop="50dp"
-        android:layout_marginLeft="40dp"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:textColor="#635151"
         android:textSize="20dp" />
 
     <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_gravity="center"
         android:layout_width="290dp"
         android:layout_height="50dp"
@@ -177,6 +179,11 @@
         android:hint="견종 / 묘종 입력"
         android:maxLength="20"
         android:background="@drawable/exam" />
+
+    <ImageView
+        android:id="@+id/imgtest"
+        android:layout_width="20dp"
+        android:layout_height="20dp" />
 
     <RelativeLayout
         android:layout_width="match_parent"

@@ -4,24 +4,39 @@ import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+
 
 class FindRegisterActivity : AppCompatActivity() {
+    var auth : FirebaseAuth? = null
+    var firestore : FirebaseFirestore? = null
+    val animal = Animal()
 
     lateinit var ivProfile: ImageView
     private var img_cnt = 0
+    val db = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_find_register)
         initImageViewProfile()
         supportActionBar?.hide()
+
+        auth = Firebase.auth
+        firestore = FirebaseFirestore.getInstance()
+
+
 
         val next = findViewById<Button>(R.id.next_button)
 
@@ -31,7 +46,7 @@ class FindRegisterActivity : AppCompatActivity() {
                 Toast.makeText(this, "사진을 등록해주세요.", Toast.LENGTH_SHORT).show()
             else {
                 val intent = Intent(this,
-                    FindRegisterActivity3::class.java)
+                    FindRegisterActivity2::class.java)
                 startActivity(intent)
             }
         }
@@ -109,8 +124,16 @@ class FindRegisterActivity : AppCompatActivity() {
             2000 -> {
                 val selectedImageUri: Uri? = data?.data
                 if (selectedImageUri != null) {
-                    ivProfile.setImageURI(selectedImageUri)
+                    val intent = Intent(this,
+                        FindRegisterActivity2::class.java)
+                    ivProfile.setImageURI(selectedImageUri) // 이미지뷰에 사진 등록
+                    animal.uriPhoto = selectedImageUri
+                    intent.putExtra("key", animal)
+                    // 로그인 기능 구현 되면 아이디 값을 document에 pet빼고 넣음
+                    db.collection("animal").document("pet").set(animal)
                     img_cnt = 1
+
+
                 } else {
                     Toast.makeText(this, "사진을 가져오지 못했습니다.", Toast.LENGTH_SHORT).show()
                 }

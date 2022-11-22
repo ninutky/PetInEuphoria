@@ -1,45 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF9E4"
-    tools:context=".FindProfile">
+    android:orientation="vertical"
+    android:background="#FFF9E4">
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/prev_button"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="75dp"
             android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="30dp"
             android:background="@drawable/button"
             android:text="이전"
             android:textColor="@color/white"
-            android:textSize="20dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true" />
+            android:textSize="20dp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/next_button"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="75dp"
             android:layout_height="60dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="30dp"
-            android:text="완료"
-            android:textSize="20dp"
-            android:textColor="@color/white"
-            android:background="@drawable/button"
             android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true" />
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/button"
+            android:text="완료"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
     </RelativeLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:background="@drawable/profile"
+        android:src="@drawable/camera" />
+
+    <TextView
+        android:id="@+id/p_animal_name"
+        android:layout_width="320dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:background="@drawable/exam"
+        android:text="이름 / 나이 / 종"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/p_animal_date"
+        android:layout_width="320dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:background="@drawable/exam"
+        android:text="실종날짜: 0000/00/00"
+        android:textSize="25dp" />
+
+</LinearLayout>

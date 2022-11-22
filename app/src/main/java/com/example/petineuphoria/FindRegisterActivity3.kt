@@ -10,25 +10,42 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 
 class FindRegisterActivity3 : AppCompatActivity() {
+    val animal = Animal()
+    var auth : FirebaseAuth? = null
+    var firestore : FirebaseFirestore? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_find_register3)
         supportActionBar?.hide()
 
+        auth = Firebase.auth
+        firestore = FirebaseFirestore.getInstance()
+
+        val db = Firebase.firestore
+
         val next = findViewById<Button>(R.id.next_button)
         val prev = findViewById<Button>(R.id.prev_button)
         val text1 = findViewById<EditText>(R.id.animal_characteristic)
 
-
+        // 다음 버튼
         next.setOnClickListener {
+            // 빈칸이면
             if (isNull(text1.getText().toString()))
                 Toast.makeText(this, "특징을 입력해주세요.", Toast.LENGTH_SHORT).show()
             else {
                 val intent = Intent(this,
                     FindRegisterActivity4::class.java)
+                animal.xmrwld = text1.toString()
+                db.collection("animal").document("pet").update("xmrwld", animal.xmrwld.toString())
                 startActivity(intent)
             }
         }
@@ -60,4 +77,3 @@ class FindRegisterActivity3 : AppCompatActivity() {
 
 
 }
-

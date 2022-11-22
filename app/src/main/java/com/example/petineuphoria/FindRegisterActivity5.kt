@@ -1,6 +1,5 @@
 package com.example.petineuphoria
 
-import CustomTextWatcher
 import android.app.DatePickerDialog
 import android.app.DatePickerDialog.OnDateSetListener
 import android.content.Intent
@@ -15,7 +14,6 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 
-
 class FindRegisterActivity5 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,15 +24,14 @@ class FindRegisterActivity5 : AppCompatActivity() {
         val done = findViewById<Button>(R.id.next_button)
         val prev = findViewById<Button>(R.id.prev_button)
         val chk = findViewById<CheckBox>(R.id.checkbox_cheese)
-        val gratuity_t = findViewById<TextView>(R.id.gratuity)
+        val gratuity = findViewById<TextView>(R.id.gratuity)
+        val gratuity_t = findViewById<TextView>(R.id.gratuity_t)
         val w_t = findViewById<EditText>(R.id.want_text)
 
         // 완료
         done.setOnClickListener {
-            val intent = Intent(
-                this,
-                FindProfile::class.java
-            )
+            val intent = Intent(this,
+                RegistrationCompletionActivity::class.java)
             startActivity(intent)
         }
 
@@ -67,10 +64,15 @@ class FindRegisterActivity5 : AppCompatActivity() {
         }
 
         chk.setOnClickListener(View.OnClickListener {
-            if (chk.isChecked)
+            if (chk.isChecked) {
+                gratuity.setVisibility(View.VISIBLE)
                 gratuity_t.setVisibility(View.VISIBLE)
-            else
+            }
+            else {
+                gratuity.setVisibility(View.INVISIBLE)
                 gratuity_t.setVisibility(View.INVISIBLE)
+            }
+
 
         })
 

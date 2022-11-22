@@ -88,18 +88,26 @@
             android:buttonTint="#B78F43"
             android:layout_marginLeft="40dp"
             android:onClick="onCheckboxClicked"/>
+
         <EditText
             android:id="@+id/gratuity"
-            android:layout_width="270dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:inputType="number"
             android:layout_marginLeft="90dp"
-            android:visibility="invisible"
-            android:hint="금액을 적어주세요."/>
+            android:hint="금액을 적어주세요."
+            android:inputType="number"
+            android:visibility="invisible" />
 
+        <TextView
+            android:id="@+id/gratuity_t"
+            android:text="원"
+            android:textSize="20dp"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
     </RelativeLayout>
-
-
 
     <RelativeLayout
         android:layout_width="match_parent"
