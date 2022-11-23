@@ -18,7 +18,7 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 
-class FindRegisterActivity : AppCompatActivity() {
+class ReportRegisterActivity : AppCompatActivity() {
     var auth : FirebaseAuth? = null
     var firestore : FirebaseFirestore? = null
     val animal = Animal()
@@ -36,10 +36,7 @@ class FindRegisterActivity : AppCompatActivity() {
         auth = Firebase.auth
         firestore = FirebaseFirestore.getInstance()
 
-
-
         val next = findViewById<Button>(R.id.next_button)
-
 
         next.setOnClickListener {
             if (img_cnt == 0)

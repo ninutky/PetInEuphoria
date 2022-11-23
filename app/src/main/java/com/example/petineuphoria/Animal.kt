@@ -1,10 +1,15 @@
 package com.example.petineuphoria
 
+import android.R.string
 import android.net.Uri
 import java.io.Serializable
+import java.util.Date
+
 
 data class Animal(
-    var uriPhoto : Uri? = null,
+    var uid: String? = null,
+    var uriPhoto: Uri? = null,
+    var color: Int?= null,
     var name: String? = null,
     var age: String? = null,
     var breed: String? = null,
@@ -12,5 +17,7 @@ data class Animal(
     var gender: Boolean? = null,
     var dog_or_cat: Boolean? = null,
     var a_color: Int? = null,
-    var xmrwld: String? = null
+    var xmrwld: String? = null,
+    var date: Date? = null
+
 ) : Serializable

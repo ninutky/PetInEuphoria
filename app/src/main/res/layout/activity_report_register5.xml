@@ -26,25 +26,6 @@
         android:textSize="40dp" />
 
     <TextView
-        android:text="실종 날짜"
-        android:layout_marginTop="35dp"
-        android:layout_marginLeft="40dp"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:textColor="#635151"
-        android:textSize="20dp" />
-
-    <TextView
-        android:id="@+id/startDate"
-        android:gravity="center"
-        android:layout_width="330dp"
-        android:layout_height="45dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/exam"
-        android:text="날짜 선택" />
-
-    <TextView
         android:text="적고 싶은 말"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="40dp"

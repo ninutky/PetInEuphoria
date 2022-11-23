@@ -1,10 +1,7 @@
 package com.example.petineuphoria
 
-import android.content.ContentValues.TAG
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -14,7 +11,7 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 
-class FindRegisterActivity2 : AppCompatActivity() {
+class ReportRegisterActivity2 : AppCompatActivity() {
     var auth : FirebaseAuth? = null
     var firestore : FirebaseFirestore? = null
 //    val animal = intent.getSerializableExtra("key") as Animal
@@ -23,7 +20,7 @@ class FindRegisterActivity2 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_find_register2)
+        setContentView(R.layout.activity_report_register2)
         supportActionBar?.hide()
 
         auth = Firebase.auth
@@ -52,11 +49,11 @@ class FindRegisterActivity2 : AppCompatActivity() {
         var color = 0
         radioGroup.setOnCheckedChangeListener { group, checkedId ->
             when(checkedId) {
-                R.id.color1 -> color = 1
-                R.id.color2 -> color = 2
-                R.id.color3 -> color = 3
-                R.id.color4 -> color = 4
-                R.id.color5 -> color = 5
+                R.id.color1 -> animal.color = 1
+                R.id.color2 -> animal.color = 2
+                R.id.color3 -> animal.color = 3
+                R.id.color4 -> animal.color = 4
+                R.id.color5 -> animal.color = 5
 
             }
         }
@@ -109,7 +106,7 @@ class FindRegisterActivity2 : AppCompatActivity() {
             else {
                 // 액티비티 3으로 감, 값 전달
                 val intent = Intent(this,
-                    FindRegisterActivity3::class.java)
+                    ReportRegisterActivity3::class.java)
 
                 animal.gender = isGender(g_cnt, b_cnt)
                 animal.dog_or_cat = isDogOrCat(d_cnt, c_cnt)

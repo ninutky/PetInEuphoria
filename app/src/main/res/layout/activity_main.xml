@@ -14,28 +14,45 @@
         android:layout_height="300dp"
         app:srcCompat="@drawable/unnamed" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/login"
-        android:background="@drawable/exam"
-        android:textColor="#635151"
-        android:layout_marginTop="40dp"
-        android:layout_width="300dp"
-        android:layout_height="65dp"
-        android:text="로그인하기"
-        style="?android:attr/borderlessButtonStyle"
-        android:textSize="25dp"
-        android:layout_gravity="center" />
+    <!--<TextView-->
+    <!--    android:layout_width="wrap_content"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:text="우리 애완동물을 안전하고 빠르게 " />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+    <!--        android:id="@+id/login"-->
+    <!--        android:background="@drawable/exam"-->
+    <!--        android:textColor="#635151"-->
+    <!--        android:layout_marginTop="40dp"-->
+    <!--        android:layout_width="300dp"-->
+    <!--        android:layout_height="65dp"-->
+    <!--        android:text="로그인하기"-->
+    <!--        style="?android:attr/borderlessButtonStyle"-->
+    <!--        android:textSize="25dp"-->
+    <!--        android:layout_gravity="center" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+    <!--        android:id="@+id/sign_up"-->
+    <!--        android:background="@drawable/exam"-->
+    <!--        -->
+    <!--       -->
+    <!--        android:layout_width="10"-->
+    <!--        android:layout_height="65dp"-->
+    <!--        android:text="회원가입하기"-->
+    <!--        -->
+    <!--        android:textSize="25dp"-->
+    <!--       />-->
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/sign_up"
-        android:background="@drawable/exam"
-        android:textColor="#635151"
-        android:layout_marginTop="60dp"
-        android:layout_width="300dp"
-        android:layout_height="65dp"
-        android:text="회원가입하기"
+        android:id="@+id/google_login_btn"
         style="?android:attr/borderlessButtonStyle"
-        android:textSize="25dp"
-        android:layout_gravity="center" />
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/google_btn"
+        android:drawableLeft="@drawable/size"
+        android:text="구글 계정으로 로그인"
+        android:textColor="@color/black" />
 
 </LinearLayout>

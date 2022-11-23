@@ -16,7 +16,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:text="등록한 글"
         android:textSize="40dp" />
@@ -31,16 +31,42 @@
             android:id="@+id/profile_img"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginLeft="30dp" />
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/profile"
+            android:src="@drawable/camera"/>
 
-        <TextView
-            android:id="@+id/pet_info"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="20dp"
-            android:text="이름 / 나이 / 종"
-            android:textSize="30dp" />
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/pet_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="이름"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/pet_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:text="나이"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/pet_breed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:text="종"
+                android:textSize="15dp" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -48,13 +74,13 @@
         android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:layout_weight="0"
         android:orientation="horizontal">
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="110dp"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:layout_marginLeft="25dp"
             android:background="@drawable/exam"
             android:text="프로필보기"
@@ -62,7 +88,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="110dp"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:layout_marginLeft="10dp"
             android:background="@drawable/exam"
             android:text="수정하기"
@@ -70,12 +96,49 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="110dp"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:layout_marginLeft="10dp"
             android:background="@drawable/exam"
             android:text="삭제하기"
             android:textSize="15dp"/>
 
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/mypage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/mypage"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/home"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/home_click"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/setting"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/setting"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
 
 </LinearLayout>

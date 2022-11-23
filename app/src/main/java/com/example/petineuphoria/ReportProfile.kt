@@ -6,13 +6,13 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
-class FindProfile : AppCompatActivity() {
+class ReportProfile : AppCompatActivity() {
     lateinit var ivProfile: ImageView
     private var img_cnt = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_find_profile)
+        setContentView(R.layout.activity_report_profile)
         supportActionBar?.hide()
 
         var TEXTVIEW = findViewById<TextView>(R.id.p_animal_name)

@@ -12,6 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PetInEuphoria">
         <activity
+            android:name=".FindRegisterActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".SelectActivity"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".HomeActivity"
             android:exported="false">
             <meta-data
@@ -26,35 +40,37 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".FindProfile"
+            android:name=".ReportProfile"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".FindRegisterActivity5"
+            android:name=".ReportRegisterActivity5"
             android:exported="false" />
         <activity
-            android:name=".FindRegisterActivity4"
+            android:name=".ReportRegisterActivity4"
             android:exported="false" />
         <activity
-            android:name=".FindRegisterActivity3"
+            android:name=".ReportRegisterActivity3"
             android:exported="false" />
         <activity
-            android:name=".FindRegisterActivity2"
+            android:name=".ReportRegisterActivity2"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
-        <activity
-            android:name=".FindRegisterActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".ReportRegisterActivity"
+            android:exported="true">
+
         </activity>
     </application>
 

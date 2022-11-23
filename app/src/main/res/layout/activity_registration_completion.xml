@@ -7,8 +7,8 @@
     android:background="#FFF9E4">
     
     <ImageView
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="290dp"
+        android:layout_height="290dp"
         android:layout_gravity="center"
         android:layout_marginTop="100dp"
         android:src="@drawable/completion"
@@ -18,8 +18,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="35dp"
-        android:textSize="35dp"
+        android:layout_marginTop="45dp"
+        android:textSize="25dp"
         android:text="등록이 완료되었습니다!" />
 
     <RelativeLayout

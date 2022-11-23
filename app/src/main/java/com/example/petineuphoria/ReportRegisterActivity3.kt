@@ -17,14 +17,14 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 
-class FindRegisterActivity3 : AppCompatActivity() {
+class ReportRegisterActivity3 : AppCompatActivity() {
     val animal = Animal()
     var auth : FirebaseAuth? = null
     var firestore : FirebaseFirestore? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_find_register3)
+        setContentView(R.layout.activity_report_register3)
         supportActionBar?.hide()
 
         auth = Firebase.auth
@@ -43,9 +43,9 @@ class FindRegisterActivity3 : AppCompatActivity() {
                 Toast.makeText(this, "특징을 입력해주세요.", Toast.LENGTH_SHORT).show()
             else {
                 val intent = Intent(this,
-                    FindRegisterActivity4::class.java)
-                animal.xmrwld = text1.toString()
-                db.collection("animal").document("pet").update("xmrwld", animal.xmrwld.toString())
+                    ReportRegisterActivity4::class.java)
+                animal.xmrwld = text1.getText().toString()
+                db.collection("animal").document("pet").update("xmrwld", animal.xmrwld)
                 startActivity(intent)
             }
         }

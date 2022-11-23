@@ -1,7 +1,6 @@
 package com.example.petineuphoria
 
-import android.app.DatePickerDialog
-import android.app.DatePickerDialog.OnDateSetListener
+
 import android.content.Intent
 import android.os.Bundle
 import android.view.KeyEvent
@@ -12,14 +11,27 @@ import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import java.util.*
 
-class FindRegisterActivity5 : AppCompatActivity() {
+class ReportRegisterActivity5 : AppCompatActivity() {
+    val animal = Animal()
+    var auth : FirebaseAuth? = null
+    var firestore : FirebaseFirestore? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_find_register5)
+        setContentView(R.layout.activity_report_register5)
         supportActionBar?.hide()
+
+        auth = Firebase.auth
+        firestore = FirebaseFirestore.getInstance()
+
+        val db = Firebase.firestore
 
         val done = findViewById<Button>(R.id.next_button)
         val prev = findViewById<Button>(R.id.prev_button)
@@ -27,41 +39,6 @@ class FindRegisterActivity5 : AppCompatActivity() {
         val gratuity = findViewById<TextView>(R.id.gratuity)
         val gratuity_t = findViewById<TextView>(R.id.gratuity_t)
         val w_t = findViewById<EditText>(R.id.want_text)
-
-        // 완료
-        done.setOnClickListener {
-            val intent = Intent(this,
-                RegistrationCompletionActivity::class.java)
-            startActivity(intent)
-        }
-
-        // 이전
-        prev.setOnClickListener {
-            super.onBackPressed()
-        }
-
-        var sd = findViewById<TextView>(R.id.startDate)
-
-        // 텍스트뷰 누르면
-        sd.setOnClickListener {
-            val cal = Calendar.getInstance()
-
-            val data = OnDateSetListener { view, year, month, day ->
-                sd.setText("${year}년 ${month}월 ${day}일")
-            }
-
-            val dialog = DatePickerDialog(
-                this,
-                data,
-                cal.get(Calendar.YEAR),
-                cal.get(Calendar.MONTH),
-                cal.get(Calendar.DAY_OF_MONTH)
-            )
-            dialog.show()
-            dialog.datePicker.spinnersShown = true
-            dialog.getButton(DatePickerDialog.BUTTON_NEGATIVE).setTextColor(resources.getColor(R.color.black, theme))
-            dialog.getButton(DatePickerDialog.BUTTON_POSITIVE).setTextColor(resources.getColor(R.color.black, theme))
-        }
 
         chk.setOnClickListener(View.OnClickListener {
             if (chk.isChecked) {
@@ -85,6 +62,20 @@ class FindRegisterActivity5 : AppCompatActivity() {
             }
             false
         })
+
+        // 완료
+        done.setOnClickListener {
+            val intent = Intent(this,
+                RegistrationCompletionActivity::class.java)
+            startActivity(intent)
+        }
+
+        // 이전
+        prev.setOnClickListener {
+            super.onBackPressed()
+        }
+
+
 
 
     }
