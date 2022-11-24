@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
                         idToken != null -> {
                             // 여기까지는 구글 계정으로 로그인하고 ID 토큰을 가져오는 것이었고, 이제 구글 ID 토큰을 파이어베이스 앱과 연결하는 작업 진행
                             Log.d("mytag", "구글 ID 토큰 확인 ${idToken}")
-                            animal.uid = "${idToken}"
+                            // animal.uid = "${idToken}"
                             val firebaseCredential = GoogleAuthProvider.getCredential(idToken, null)
                             auth.signInWithCredential(firebaseCredential)
                                 .addOnCompleteListener(this) { task ->

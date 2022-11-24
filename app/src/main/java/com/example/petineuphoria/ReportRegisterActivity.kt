@@ -127,7 +127,7 @@ class ReportRegisterActivity : AppCompatActivity() {
                     animal.uriPhoto = selectedImageUri
                     intent.putExtra("key", animal)
                     // 로그인 기능 구현 되면 아이디 값을 document에 pet빼고 넣음
-                    db.collection("animal").document("pet").set(animal)
+                    db.collection("animal").document(FirebaseAuth.getInstance().currentUser?.uid.toString()).set(animal)
                     img_cnt = 1
 
 

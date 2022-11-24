@@ -45,7 +45,7 @@ class ReportRegisterActivity3 : AppCompatActivity() {
                 val intent = Intent(this,
                     ReportRegisterActivity4::class.java)
                 animal.xmrwld = text1.getText().toString()
-                db.collection("animal").document("pet").update("xmrwld", animal.xmrwld)
+                db.collection("animal").document(FirebaseAuth.getInstance().currentUser?.uid.toString()).update("xmrwld", animal.xmrwld)
                 startActivity(intent)
             }
         }

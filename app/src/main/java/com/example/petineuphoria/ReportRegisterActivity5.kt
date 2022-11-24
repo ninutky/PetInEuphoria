@@ -40,6 +40,7 @@ class ReportRegisterActivity5 : AppCompatActivity() {
         val gratuity_t = findViewById<TextView>(R.id.gratuity_t)
         val w_t = findViewById<EditText>(R.id.want_text)
 
+        // 사례금 버튼 클릭하면
         chk.setOnClickListener(View.OnClickListener {
             if (chk.isChecked) {
                 gratuity.setVisibility(View.VISIBLE)

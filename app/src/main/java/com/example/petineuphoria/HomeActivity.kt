@@ -1,17 +1,18 @@
 package com.example.petineuphoria
 
+import android.graphics.Color
+import android.graphics.drawable.GradientDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -46,9 +47,9 @@ class HomeActivity : AppCompatActivity() {
         storage = FirebaseStorage.getInstance()
         firestore = FirebaseFirestore.getInstance()
 
-        val pet = Animal()
+        
 
-        val docRef = db.collection("animal").document("pet")
+        val docRef = db.collection("animal").document(FirebaseAuth.getInstance().currentUser?.uid.toString())
         docRef.get()
             .addOnSuccessListener { document ->
                 if (document != null) {
@@ -63,8 +64,7 @@ class HomeActivity : AppCompatActivity() {
             .addOnFailureListener { exception ->
                 Log.d("mytag", "get failed with ", exception)
             }
-
-
+        }
 
 //        storage!!.getReference().child("image").child(fileName)
 //            .putFile(selectImage!!)//어디에 업로드할지 지정
@@ -81,5 +81,4 @@ class HomeActivity : AppCompatActivity() {
 //                        }
 //                }
 //            }
-    }
 }

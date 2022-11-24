@@ -26,6 +26,7 @@ class ReportRegisterActivity2 : AppCompatActivity() {
         auth = Firebase.auth
         firestore = FirebaseFirestore.getInstance()
 
+
         val db = Firebase.firestore
 
         val next = findViewById<Button>(R.id.next_button)
@@ -43,7 +44,6 @@ class ReportRegisterActivity2 : AppCompatActivity() {
         var cb3 = findViewById<RadioButton>(R.id.color3)
         var cb4 = findViewById<RadioButton>(R.id.color4)
         var cb5 = findViewById<RadioButton>(R.id.color5)
-
 
         // 체크박스
         var color = 0
@@ -118,12 +118,12 @@ class ReportRegisterActivity2 : AppCompatActivity() {
 //                animal.update("name", text1.getText().toString())
 //                animal.update("age", text2.getText().toString())
 //                animal.update("breed", text3.getText().toString())
-                db.collection("animal").document("uid").update("gender", animal.gender.toString())
-                db.collection("animal").document("uid").update("dog_or_cat", animal.dog_or_cat.toString())
-                db.collection("animal").document("uid").update("a_color", animal.a_color.toString())
-                db.collection("animal").document("uid").update("name", animal.name.toString())
-                db.collection("animal").document("uid").update("age", animal.age.toString())
-                db.collection("animal").document("uid").update("breed", animal.breed.toString())
+                db.collection("animal").document(FirebaseAuth.getInstance().currentUser?.uid.toString()).update("gender", animal.gender.toString())
+                db.collection("animal").document(FirebaseAuth.getInstance().currentUser?.uid.toString()).update("dog_or_cat", animal.dog_or_cat.toString())
+                db.collection("animal").document(FirebaseAuth.getInstance().currentUser?.uid.toString()).update("a_color", animal.a_color.toString())
+                db.collection("animal").document(FirebaseAuth.getInstance().currentUser?.uid.toString()).update("name", animal.name.toString())
+                db.collection("animal").document(FirebaseAuth.getInstance().currentUser?.uid.toString()).update("age", animal.age.toString())
+                db.collection("animal").document(FirebaseAuth.getInstance().currentUser?.uid.toString()).update("breed", animal.breed.toString())
                 startActivity(intent)
             }
 
@@ -134,7 +134,7 @@ class ReportRegisterActivity2 : AppCompatActivity() {
             super.onBackPressed()
         }
 
-        // 체크박스 버튼
+        // 털색 체크박스 버튼을 누르면 체크표시
         cb1.setOnClickListener {
             check(true)
         }
@@ -181,9 +181,5 @@ class ReportRegisterActivity2 : AppCompatActivity() {
             return false
         }
     }
-
-
-
-
 
 }

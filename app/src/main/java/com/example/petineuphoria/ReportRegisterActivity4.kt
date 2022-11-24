@@ -32,7 +32,7 @@ class ReportRegisterActivity4 : AppCompatActivity() {
 
         val db = Firebase.firestore
 
-        db.collection("animal").document("pet").update("date", animal.date)
+        db.collection("animal").document(FirebaseAuth.getInstance().currentUser?.uid.toString()).update("date", animal.date)
 
         var date = findViewById<TextView>(R.id.startDate)
 

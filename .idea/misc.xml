@@ -3,6 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/2207/AndroidProject/PetInEuphoria/app/src/main/res/drawable/profile.xml" value="0.1915" />
+        <entry key="..\:/2207/AndroidProject/PetInEuphoria/app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="..\:/2207/AndroidProject/PetInEuphoria/app/src/main/res/layout/activity_report_profile.xml" value="0.1778115501519757" />
+        <entry key="..\:/2207/AndroidProject/PetInEuphoria/app/src/main/res/layout/activity_report_register.xml" value="0.1778115501519757" />
+        <entry key="..\:/2207/AndroidProject/PetInEuphoria/app/src/main/res/layout/activity_report_register2.xml" value="0.1778115501519757" />
+        <entry key="..\:/2207/AndroidProject/PetInEuphoria/app/src/main/res/layout/activity_report_register3.xml" value="0.1778115501519757" />
+        <entry key="..\:/2207/AndroidProject/PetInEuphoria/app/src/main/res/layout/activity_report_register4.xml" value="0.1778115501519757" />
+        <entry key="..\:/2207/AndroidProject/PetInEuphoria/app/src/main/res/layout/activity_report_register5.xml" value="0.1778115501519757" />
+        <entry key="..\:/2207/AndroidProject/PetInEuphoria/app/src/main/res/layout/activity_select.xml" value="0.1778115501519757" />
         <entry key="..\:/Users/Mirim/AndroidStudioProjects/PetInEuphoria/app/src/main/res/drawable/boy.xml" value="0.1" />
         <entry key="..\:/Users/Mirim/AndroidStudioProjects/PetInEuphoria/app/src/main/res/drawable/exam.xml" value="0.1555" />
         <entry key="..\:/Users/Mirim/AndroidStudioProjects/PetInEuphoria/app/src/main/res/drawable/girl.xml" value="0.1" />
