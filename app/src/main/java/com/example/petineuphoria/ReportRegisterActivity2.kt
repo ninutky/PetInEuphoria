@@ -118,12 +118,12 @@ class ReportRegisterActivity2 : AppCompatActivity() {
 //                animal.update("name", text1.getText().toString())
 //                animal.update("age", text2.getText().toString())
 //                animal.update("breed", text3.getText().toString())
-                db.collection("animal").document("pet").update("gender", animal.gender.toString())
-                db.collection("animal").document("pet").update("dog_or_cat", animal.dog_or_cat.toString())
-                db.collection("animal").document("pet").update("a_color", animal.a_color.toString())
-                db.collection("animal").document("pet").update("name", animal.name.toString())
-                db.collection("animal").document("pet").update("age", animal.age.toString())
-                db.collection("animal").document("pet").update("breed", animal.breed.toString())
+                db.collection("animal").document("uid").update("gender", animal.gender.toString())
+                db.collection("animal").document("uid").update("dog_or_cat", animal.dog_or_cat.toString())
+                db.collection("animal").document("uid").update("a_color", animal.a_color.toString())
+                db.collection("animal").document("uid").update("name", animal.name.toString())
+                db.collection("animal").document("uid").update("age", animal.age.toString())
+                db.collection("animal").document("uid").update("breed", animal.breed.toString())
                 startActivity(intent)
             }
 

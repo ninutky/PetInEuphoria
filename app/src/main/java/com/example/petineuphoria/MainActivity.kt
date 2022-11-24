@@ -13,6 +13,7 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     val WEB_CLIENT_ID = "124344412923-otebslpgabh70qpsomrrch8r8edofbvk.apps.googleusercontent.com"
     val REQUEST_CODE = 1
     lateinit var oneTapClient: SignInClient
-    // lateinit var auth: FirebaseAuth
+    val animal = Animal()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,6 +64,7 @@ class MainActivity : AppCompatActivity() {
                         idToken != null -> {
                             // 여기까지는 구글 계정으로 로그인하고 ID 토큰을 가져오는 것이었고, 이제 구글 ID 토큰을 파이어베이스 앱과 연결하는 작업 진행
                             Log.d("mytag", "구글 ID 토큰 확인 ${idToken}")
+                            animal.uid = "${idToken}"
                             val firebaseCredential = GoogleAuthProvider.getCredential(idToken, null)
                             auth.signInWithCredential(firebaseCredential)
                                 .addOnCompleteListener(this) { task ->
